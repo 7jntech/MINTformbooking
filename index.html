@@ -26,7 +26,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            padding: 40px 20px;
+            padding: 20px;
         }
 
         .container {
@@ -42,7 +42,7 @@
         .header {
             background: linear-gradient(135deg, var(--mint-primary) 0%, var(--mint-dark) 100%);
             color: var(--white);
-            padding: 40px 30px;
+            padding: 30px 20px;
             text-align: center;
             position: relative;
         }
@@ -55,18 +55,18 @@
             border-radius: 50% 50% 0 0;
         }
         .logo-icon {
-            width: 60px; height: 60px;
+            width: 50px; height: 50px;
             background: var(--white);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 15px;
-            font-size: 28px;
+            margin: 0 auto 10px;
+            font-size: 24px;
         }
-        .header h1 { font-size: 2rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 5px; }
-        .header .subtitle { font-size: 1.1rem; opacity: 0.9; font-weight: 300; }
+        .header h1 { font-size: 1.6rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px; }
+        .header .subtitle { font-size: 1rem; opacity: 0.9; font-weight: 300; }
 
         /* Form Body */
-        .form-body { padding: 40px 30px 30px; }
+        .form-body { padding: 35px 25px 25px; }
 
         /* Visit Type Toggle */
         .visit-toggle {
@@ -74,14 +74,14 @@
             background: var(--gray-100);
             border-radius: 12px;
             padding: 5px;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             position: relative;
         }
         .visit-toggle input[type="radio"] { display: none; }
         .visit-toggle label {
             flex: 1;
             text-align: center;
-            padding: 14px 20px;
+            padding: 12px 15px;
             border-radius: 10px;
             cursor: pointer;
             font-weight: 600;
@@ -89,6 +89,7 @@
             transition: all 0.3s ease;
             position: relative;
             z-index: 1;
+            font-size: 0.95rem;
         }
         .visit-toggle input[type="radio"]:checked + label { color: var(--white); }
         .toggle-slider {
@@ -105,7 +106,7 @@
 
         /* Form Fields */
         .form-group {
-            margin-bottom: 22px;
+            margin-bottom: 18px;
             opacity: 1;
             transform: translateY(0);
             transition: all 0.4s ease;
@@ -113,14 +114,14 @@
         .form-group.hidden { display: none; opacity: 0; transform: translateY(-10px); }
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             font-weight: 600;
             color: var(--gray-800);
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
         .required-badge {
             color: var(--error);
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 700;
             margin-left: 4px;
             text-transform: uppercase;
@@ -130,10 +131,10 @@
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 14px 16px;
+            padding: 12px 14px;
             border: 2px solid var(--gray-200);
             border-radius: 10px;
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-family: inherit;
             transition: all 0.3s ease;
             background: var(--white);
@@ -150,7 +151,7 @@
         .form-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
         }
         @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
 
@@ -158,14 +159,14 @@
         .returning-fields {
             background: var(--mint-light);
             border-radius: 12px;
-            padding: 25px;
-            margin-bottom: 20px;
+            padding: 20px;
+            margin-bottom: 18px;
             border-left: 4px solid var(--mint-primary);
         }
         .returning-fields h3 {
             color: var(--mint-dark);
-            margin-bottom: 20px;
-            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-size: 1rem;
             display: flex;
             align-items: center;
             gap: 8px;
@@ -174,16 +175,16 @@
         /* Submit Button */
         .submit-btn {
             width: 100%;
-            padding: 16px;
+            padding: 14px;
             background: linear-gradient(135deg, var(--mint-primary) 0%, var(--mint-dark) 100%);
             color: var(--white);
             border: none;
             border-radius: 12px;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin-top: 10px;
+            margin-top: 8px;
             letter-spacing: 0.5px;
         }
         .submit-btn:hover {
@@ -192,43 +193,11 @@
         }
         .submit-btn:active { transform: translateY(0); }
 
-        /* Block Screen (for non-referred visitors) */
-        .block-screen {
-            display: none;
-            text-align: center;
-            padding: 60px 30px;
-        }
-        .block-screen.show { display: block; animation: fadeIn 0.5s ease; }
-        .block-icon {
-            width: 80px; height: 80px;
-            background: var(--mint-light);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 40px;
-        }
-        .block-screen h2 { color: var(--mint-dark); margin-bottom: 10px; }
-        .block-screen p { color: var(--gray-600); margin-bottom: 25px; line-height: 1.6; }
-        .block-screen a {
-            display: inline-block;
-            padding: 12px 30px;
-            background: var(--mint-primary);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        .block-screen a:hover {
-            background: var(--mint-dark);
-            transform: translateY(-2px);
-        }
-
         /* Success Message */
         .success-message {
             display: none;
             text-align: center;
-            padding: 40px 30px;
+            padding: 40px 25px;
         }
         .success-message.show { display: block; animation: fadeIn 0.5s ease; }
         @keyframes fadeIn {
@@ -236,17 +205,17 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .success-icon {
-            width: 80px; height: 80px;
+            width: 70px; height: 70px;
             background: var(--mint-light);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 40px;
+            margin: 0 auto 15px;
+            font-size: 35px;
         }
-        .success-message h2 { color: var(--mint-dark); margin-bottom: 10px; }
-        .success-message p { color: var(--gray-600); margin-bottom: 25px; }
+        .success-message h2 { color: var(--mint-dark); margin-bottom: 8px; font-size: 1.4rem; }
+        .success-message p { color: var(--gray-600); margin-bottom: 20px; font-size: 0.95rem; }
         .reset-btn {
-            padding: 12px 30px;
+            padding: 10px 25px;
             background: var(--gray-100);
             border: 2px solid var(--mint-primary);
             color: var(--mint-primary);
@@ -254,6 +223,7 @@
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
+            font-size: 0.95rem;
         }
         .reset-btn:hover { background: var(--mint-primary); color: var(--white); }
 
@@ -261,8 +231,14 @@
             appearance: none;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%236c757d' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 16px center;
-            padding-right: 40px;
+            background-position: right 14px center;
+            padding-right: 35px;
+        }
+
+        /* iframe-specific: remove outer padding for seamless embed */
+        @media (max-width: 720px) {
+            body { padding: 0; background: var(--white); }
+            .container { border-radius: 0; box-shadow: none; }
         }
     </style>
 <base target="_blank">
@@ -276,15 +252,7 @@
             <p class="subtitle">Dental Chart & Patient Intake</p>
         </div>
 
-        <!-- Block Screen (shown if not coming from MINT site) -->
-        <div class="block-screen" id="blockScreen">
-            <div class="block-icon">🔒</div>
-            <h2>Booking Only Available Through Official Site</h2>
-            <p>To schedule your appointment and access our patient forms, please visit the MINT Dental Group official website and click the "Book" button.</p>
-            <a href="https://www.mintdentalgroup.com.ph/">Go to MINT Dental Group</a>
-        </div>
-
-        <!-- Form (shown only if coming from MINT site) -->
+        <!-- Form -->
         <div class="form-body" id="formContainer">
             <form id="dentalForm" action="https://formspree.io/f/mpqedzey" method="POST" novalidate>
 
@@ -404,7 +372,7 @@
 
                     <div class="form-group">
                         <label for="medicalHistory">Medical History / Allergies / Medications</label>
-                        <textarea id="medicalHistory" name="medicalHistory" rows="4" placeholder="Please list any medical conditions, allergies, or medications we should be aware of..."></textarea>
+                        <textarea id="medicalHistory" name="medicalHistory" rows="3" placeholder="Please list any medical conditions, allergies, or medications we should be aware of..."></textarea>
                     </div>
                 </div>
 
@@ -422,33 +390,12 @@
     </div>
 
     <script>
-        // ===== REFERRER CHECK =====
-        // Only show form if visitor came from MINT website
-        const allowedDomains = ['mintdentalgroup.com.ph', 'www.mintdentalgroup.com.ph'];
-        const referrer = document.referrer;
-        let isFromMintSite = false;
-
-        if (referrer) {
-            isFromMintSite = allowedDomains.some(domain => referrer.includes(domain));
-        }
-
-        // For testing: uncomment the line below to bypass the check
-        // isFromMintSite = true;
-
-        const formContainer = document.getElementById('formContainer');
-        const blockScreen = document.getElementById('blockScreen');
-
-        if (!isFromMintSite) {
-            formContainer.style.display = 'none';
-            blockScreen.classList.add('show');
-        }
-        // ==========================
-
         const firstTimeRadio = document.getElementById('firstTime');
         const returningRadio = document.getElementById('returning');
         const firstTimeFields = document.getElementById('firstTimeFields');
         const returningFields = document.getElementById('returningFields');
         const form = document.getElementById('dentalForm');
+        const formContainer = document.getElementById('formContainer');
         const successMessage = document.getElementById('successMessage');
         const submitBtn = document.getElementById('submitBtn');
 
@@ -502,6 +449,10 @@
                 if (response.ok) {
                     formContainer.style.display = 'none';
                     successMessage.classList.add('show');
+                    // Notify parent window (MINT site) that form was submitted
+                    if (window.parent !== window) {
+                        window.parent.postMessage('formSubmitted', '*');
+                    }
                 } else {
                     alert('Something went wrong. Please try again.');
                 }
@@ -526,6 +477,19 @@
         }
         document.getElementById('phone').addEventListener('input', function() { formatPhone(this); });
         document.getElementById('emergencyPhone').addEventListener('input', function() { formatPhone(this); });
+
+        // Auto-resize iframe height for parent window
+        function sendHeight() {
+            if (window.parent !== window) {
+                const height = document.body.scrollHeight;
+                window.parent.postMessage({ type: 'resize', height: height }, '*');
+            }
+        }
+        window.addEventListener('load', sendHeight);
+        window.addEventListener('resize', sendHeight);
+        // Send height when toggling fields too
+        firstTimeRadio.addEventListener('change', () => setTimeout(sendHeight, 400));
+        returningRadio.addEventListener('change', () => setTimeout(sendHeight, 400));
     </script>
 </body>
 </html>
